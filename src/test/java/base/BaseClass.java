@@ -3,10 +3,13 @@ package base;
 import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -40,8 +43,21 @@ public class BaseClass {
 	{
 		  if(BrowserName.equalsIgnoreCase("Chrome"))
 		  {
+			 ChromeOptions option = new ChromeOptions();
+			 option.addArguments("--disable-notifications");
+			 option.addArguments("----start-maximized");
+			// option.addArguments("--headless");
+			 
+			 
+			 option.setAcceptInsecureCerts(true);
+//=================================Convert into mobile view ===================================		 
+//			    Map<String, String> mobileEmulation = new HashMap<>();
+//		        mobileEmulation.put("deviceName", "Galaxy S5");
+//             option.setExperimentalOption("mobileEmulation", mobileEmulation);
+			 
 			 WebDriverManager.chromedriver().setup();
-			 driver = new ChromeDriver();
+			 driver = new ChromeDriver(option);
+			 
 			 
 		  }
 		  else if(BrowserName.equalsIgnoreCase("Firefox"))
@@ -54,9 +70,11 @@ public class BaseClass {
 			  System.out.println("Browser Not Found.......");
 		  }
 		  
+		  
 		  driver.get(prop.getProperty("url"));
-		  driver.manage().window().maximize();
+		 // driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		  
 		  return driver ;
 		   
 		

@@ -26,13 +26,21 @@ public class LoginTest extends BaseClass{
 		driver = initilizeBrowser(prop.getProperty("browserName"));
 		lp = new LoginPage(driver);
 	}
-	@AfterClass
+	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
 	}
 	
-	
+	@Test(priority=1,enabled =true)
+	public void userLogin()
+	{
+		lp.hoverOnTheLoginButton();
+		lp.clickOnTheCustomerLoginButton();
+		lp.enterMobileNumber();
+		lp.clickOnTheContinueButton();
+		lp.enterOTPField();
+	}
 	
 
 	
