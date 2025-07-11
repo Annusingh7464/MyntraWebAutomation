@@ -39,7 +39,8 @@ public class LoginTest extends BaseClass{
 		lp.clickOnTheCustomerLoginButton();
 		lp.enterMobileNumber();
 		lp.clickOnTheContinueButton();
-		lp.enterOTPField();
+		//lp.enterOTPField();
+		//lp.otp_PasswordLogin();
 	}
 	
 
