@@ -46,7 +46,7 @@ public class BaseClass {
 			 ChromeOptions option = new ChromeOptions();
 			 option.addArguments("--disable-notifications");
 			 option.addArguments("----start-maximized");
-			 //option.addArguments("--headless");
+			// option.addArguments("--headless");
 			 
 			 
 			 option.setAcceptInsecureCerts(true);

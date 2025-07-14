@@ -40,7 +40,7 @@ public class LoginTest extends BaseClass{
 		lp.enterMobileNumber();
 		lp.clickOnTheContinueButton();
 		lp.userLoginWith_OTP_Password();
-		lp.logoutUser();
+		
 	}
 	
 

@@ -52,11 +52,9 @@ public class LoginPage {
    @FindBy(xpath="//div[contains(text(),'Otp Authentication')]")
    private WebElement otpAuthenticationText;
    
-   @FindBy(xpath="//a[@class='_drpdubro LogOut']//span[@class='fnt14']")
-   private WebElement logoutButton;
+   @FindBy(id="txtEmail2")
+   private WebElement enterPasswordField;
    
-   @FindBy(id="//span[@id='welcome-det-User']")
-   private WebElement profilebuttonForLogout;
    
 
    
@@ -86,6 +84,10 @@ public class LoginPage {
 		        wait.until(ExpectedConditions.visibilityOf(passwordAuthenticationText));
 		        String passwordText = passwordAuthenticationText.getText();
 		        System.out.println("Displayed Option: " + passwordText);
+		        //Now user is entering the password
+		        enterPasswordField.sendKeys("Annu@123");
+		        Utilitites.ThreadSleepTimeOut();
+		        
 		  
 		  } catch (org.openqa.selenium.TimeoutException e ) 
 		  { 
@@ -93,7 +95,7 @@ public class LoginPage {
 		            wait.until(ExpectedConditions.visibilityOf(otpAuthenticationText)); 
 		            String otpText = otpAuthenticationText.getText();
 		            System.out.println("Displayed Option: " + otpText);
-		            
+		            //For the OTP , Getting from users 
 		            Utilitites.userInputAsOTP(driver); 
 		           
 		            
@@ -106,17 +108,7 @@ public class LoginPage {
 		}
 		 
    }
-   public void logoutUser()
-   {
-	 
-	   wait.until(ExpectedConditions.visibilityOf(profilebuttonForLogout));
-	   Actions action = new Actions(driver);
-	   action.moveToElement(profilebuttonForLogout);
-	   Utilitites.ThreadSleepTimeOut();
-	   logoutButton.click();
-	   
-	   
-   }
+   
 	
 
 
