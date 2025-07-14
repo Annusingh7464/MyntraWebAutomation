@@ -19,6 +19,7 @@ import utills.Utilitites;
 public class LoginPage {
 
 	public WebDriver driver ;
+	public WebDriverWait wait ;
 	
 	public LoginPage(WebDriver driver)
 	{
@@ -51,6 +52,11 @@ public class LoginPage {
    @FindBy(xpath="//div[contains(text(),'Otp Authentication')]")
    private WebElement otpAuthenticationText;
    
+   @FindBy(xpath="//a[@class='_drpdubro LogOut']//span[@class='fnt14']")
+   private WebElement logoutButton;
+   
+   @FindBy(id="//span[@id='welcome-det-User']")
+   private WebElement profilebuttonForLogout;
    
 
    
@@ -71,8 +77,11 @@ public class LoginPage {
    public void clickOnTheContinueButton()
    {
 	    continueButtonOfMobileNumber.click();
-	    
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	   
+    }
+   public void userLoginWith_OTP_Password()
+   {
+	            wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 		 try {
 		        wait.until(ExpectedConditions.visibilityOf(passwordAuthenticationText));
 		        String passwordText = passwordAuthenticationText.getText();
@@ -84,37 +93,32 @@ public class LoginPage {
 		            wait.until(ExpectedConditions.visibilityOf(otpAuthenticationText)); 
 		            String otpText = otpAuthenticationText.getText();
 		            System.out.println("Displayed Option: " + otpText);
-		  
+		            
+		            Utilitites.userInputAsOTP(driver); 
+		           
+		            
+		            
+		            
 		  } catch (org.openqa.selenium.TimeoutException ex) 
 			 {
 		       System.out.println("Neither OTP nor Password is displaying"); 
 		  } 
 		}
 		 
-
-   	   
-   	  
+   }
+   public void logoutUser()
+   {
+	 
+	   wait.until(ExpectedConditions.visibilityOf(profilebuttonForLogout));
+	   Actions action = new Actions(driver);
+	   action.moveToElement(profilebuttonForLogout);
+	   Utilitites.ThreadSleepTimeOut();
+	   logoutButton.click();
+	   
+	   
    }
 	
-//	  public void otp_PasswordLogin() 
-//	  { 
-//		   
-//	  }
-	 
-	  	
-//    	if(passwordText.equalsIgnoreCase(""))
-//    	{
-//    		
-//    	}
-    	
-    //}
-	/*
-	 * public void enterOTPField() { Utilitites.userInputAsOTP(driver);
-	 * 
-	 * } public void enterLoginPassword() {
-	 * loginButtonAfterEnterOTP.sendKeys("Annu@123"); }
-	 */
-   
+
 
 
 //==Getter & Setter Methods================================

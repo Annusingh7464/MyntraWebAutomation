@@ -26,8 +26,8 @@ public class Utilitites {
 	     Actions action = new Actions(driver);
 	     action.moveToElement(lp.getLoginButton()).build().perform();
  }
- public static void userInputAsOTP(WebDriver driver)
- {
+  public static void userInputAsOTP(WebDriver driver)
+  {
 	   Scanner sc = new Scanner(System.in);
 	   System.out.println("Enter Your OTP");
 	   String otp = sc.nextLine();
@@ -45,8 +45,9 @@ public class Utilitites {
 		    otpbox.sendKeys(String.valueOf(otp.charAt(i)));
 		    
 	   }
-	  
-	   lp.getloginButtonAfterEnterOTP().click();
+	    lp.getloginButtonAfterEnterOTP().click();
+	    
  }
+  
 
 }//====== Class ======

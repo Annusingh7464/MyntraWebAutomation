@@ -29,7 +29,7 @@ public class LoginTest extends BaseClass{
 	@AfterMethod
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	
 	@Test(priority=1,enabled =true)
@@ -39,8 +39,8 @@ public class LoginTest extends BaseClass{
 		lp.clickOnTheCustomerLoginButton();
 		lp.enterMobileNumber();
 		lp.clickOnTheContinueButton();
-		//lp.enterOTPField();
-		//lp.otp_PasswordLogin();
+		lp.userLoginWith_OTP_Password();
+		lp.logoutUser();
 	}
 	
 
