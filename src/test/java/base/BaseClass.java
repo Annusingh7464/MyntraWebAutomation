@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,8 +72,9 @@ public class BaseClass {
 		  }
 		  
 		  
+		  
 		  driver.get(prop.getProperty("url"));
-		 // driver.manage().window().maximize();
+		
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		  
 		  return driver ;

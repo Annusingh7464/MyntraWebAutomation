@@ -55,6 +55,9 @@ public class LoginPage {
    @FindBy(id="txtEmail2")
    private WebElement enterPasswordField;
    
+   @FindBy(xpath="//div[@class='_btnlog']//input[@name='btn_Login']")
+   private WebElement clickLoginButtonAfterPassword;
+   
    
 
    
@@ -86,7 +89,7 @@ public class LoginPage {
 		        System.out.println("Displayed Option: " + passwordText);
 		        //Now user is entering the password
 		        enterPasswordField.sendKeys("Annu@123");
-		        Utilitites.ThreadSleepTimeOut();
+		        clickLoginButtonAfterPassword.click();
 		        
 		  
 		  } catch (org.openqa.selenium.TimeoutException e ) 
