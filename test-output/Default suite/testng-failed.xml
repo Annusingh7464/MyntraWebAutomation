@@ -6,7 +6,7 @@
       <class name="testcases.ProfileTest">
         <methods>
           <include name="tearUp"/>
-          <include name="Veriy_that_user_is_able_to_click_on_login_button"/>
+          <include name="verify_that_user_is_able_to_click_on_Title"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.ProfileTest -->

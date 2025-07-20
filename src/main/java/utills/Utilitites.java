@@ -1,11 +1,15 @@
 package utills;
 
+import java.time.Duration;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.LoginPage;
 
@@ -23,8 +27,8 @@ public class Utilitites {
  //this method is for the login hover  
  public static  void MouseHoverAction(WebDriver driver)
  {        lp = new LoginPage(driver);
-	     Actions action = new Actions(driver);
-	     action.moveToElement(lp.getLoginButton()).build().perform();
+	      Actions action = new Actions(driver);
+	      action.moveToElement(lp.getLoginButton()).build().perform();
  }
   public static void userInputAsOTP(WebDriver driver)
   {
@@ -48,6 +52,16 @@ public class Utilitites {
 	    lp.getloginButtonAfterEnterOTP().click();
 	    
  }
+  public static void commonMthodForDropDown_Button(WebElement DropDownButton, int indexValue)
+  {
+	  Select select = new Select(DropDownButton);
+	  select.selectByIndex(indexValue);
+  }
+  public static void ExplicitlyWait(WebDriver driver ,WebElement Afterlogin_Button)
+  {
+	     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
+	     wait.until(ExpectedConditions.visibilityOfAllElements(Afterlogin_Button));
+  }
   
 
 }//====== Class ======

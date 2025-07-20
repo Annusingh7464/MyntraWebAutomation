@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-18T22:55:24 IST" name="Default suite" finished-at="2025-07-18T22:56:24 IST" duration-ms="60590">
+  <suite started-at="2025-07-20T17:33:21 IST" name="Default suite" finished-at="2025-07-20T17:34:17 IST" duration-ms="55458">
     <groups>
     </groups>
-    <test started-at="2025-07-18T22:55:24 IST" name="Default test" finished-at="2025-07-18T22:56:24 IST" duration-ms="60590">
-      <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:24 IST" name="tearUp" finished-at="2025-07-18T22:55:32 IST" duration-ms="8381" status="PASS">
+    <test started-at="2025-07-20T17:33:21 IST" name="Default test" finished-at="2025-07-20T17:34:17 IST" duration-ms="55458">
+      <class name="testcases.ProfileTest">
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:33:21 IST" name="tearUp" finished-at="2025-07-20T17:33:57 IST" duration-ms="35485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method signature="hoverOnTheLoginButtonAction()[pri:1, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:32 IST" name="hoverOnTheLoginButtonAction" finished-at="2025-07-18T22:55:32 IST" duration-ms="273" status="PASS">
+        <test-method signature="Veriy_that_user_is_able_to_click_on_login_button()[pri:1, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:33:57 IST" name="Veriy_that_user_is_able_to_click_on_login_button" finished-at="2025-07-20T17:33:58 IST" duration-ms="748" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hoverOnTheLoginButtonAction -->
-        <test-method signature="clickOntheCustomerLoginButtonAction()[pri:2, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:32 IST" name="clickOntheCustomerLoginButtonAction" finished-at="2025-07-18T22:55:33 IST" duration-ms="290" status="PASS">
+        </test-method> <!-- Veriy_that_user_is_able_to_click_on_login_button -->
+        <test-method signature="verifying_that_user_able_click_on_the_myProfileButton()[pri:2, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:33:58 IST" name="verifying_that_user_able_click_on_the_myProfileButton" finished-at="2025-07-20T17:34:10 IST" duration-ms="12510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOntheCustomerLoginButtonAction -->
-        <test-method signature="enterMobileNumberAction()[pri:3, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:33 IST" name="enterMobileNumberAction" finished-at="2025-07-18T22:55:33 IST" duration-ms="220" status="PASS">
+        </test-method> <!-- verifying_that_user_able_click_on_the_myProfileButton -->
+        <test-method signature="Verify_that_user_is_able_to_select_Passenger_Type()[pri:3, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:10 IST" name="Verify_that_user_is_able_to_select_Passenger_Type" finished-at="2025-07-20T17:34:10 IST" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterMobileNumberAction -->
-        <test-method signature="clickOnTheContinueButtonAction()[pri:4, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:33 IST" name="clickOnTheContinueButtonAction" finished-at="2025-07-18T22:55:33 IST" duration-ms="352" status="PASS">
+        </test-method> <!-- Verify_that_user_is_able_to_select_Passenger_Type -->
+        <test-method signature="verify_that_user_is_able_to_click_on_Title()[pri:4, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:10 IST" name="verify_that_user_is_able_to_click_on_Title" finished-at="2025-07-20T17:34:16 IST" duration-ms="5171" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnTheContinueButtonAction -->
-        <test-method signature="userLoginWith_OTP_PasswordAction()[pri:5, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:55:33 IST" name="userLoginWith_OTP_PasswordAction" finished-at="2025-07-18T22:56:24 IST" duration-ms="50925" status="PASS">
+        </test-method> <!-- verify_that_user_is_able_to_click_on_Title -->
+        <test-method signature="verify_that_user_is_able_to_enter_firstName()[pri:5, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:16 IST" name="verify_that_user_is_able_to_enter_firstName" finished-at="2025-07-20T17:34:16 IST" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userLoginWith_OTP_PasswordAction -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@2fb0623e]" started-at="2025-07-18T22:56:24 IST" name="tearDown" finished-at="2025-07-18T22:56:24 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verify_that_user_is_able_to_enter_firstName -->
+        <test-method signature="verify_that_user_is_able_to_enter_last_name()[pri:6, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:16 IST" name="verify_that_user_is_able_to_enter_last_name" finished-at="2025-07-20T17:34:16 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_that_user_is_able_to_enter_last_name -->
+        <test-method signature="verify_that_user_able_to_enterDOB()[pri:7, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:16 IST" name="verify_that_user_able_to_enterDOB" finished-at="2025-07-20T17:34:16 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_that_user_able_to_enterDOB -->
+        <test-method signature="verify_that_user_is_able_to_update_profile()[pri:8, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:16 IST" name="verify_that_user_is_able_to_update_profile" finished-at="2025-07-20T17:34:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_that_user_is_able_to_update_profile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.ProfileTest@642a7222]" started-at="2025-07-20T17:34:16 IST" name="tearDown" finished-at="2025-07-20T17:34:17 IST" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.LoginTest -->
+      </class> <!-- testcases.ProfileTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
